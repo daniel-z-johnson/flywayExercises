@@ -9,3 +9,11 @@ db/migration - most basic example, only migration is run
 
 ####Example 2
 db/migration2 - a very basic example with two migrations
+
+####Example 3
+db/migration3 - slightly malformed example migration skips V2__{descriptions}.sql, still works. It worth running
+```SQL
+SELECT * FROM "schema_version"
+```
+
+in the h2 web console and look at the resulting table.
