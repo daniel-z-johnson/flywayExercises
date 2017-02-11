@@ -17,3 +17,6 @@ SELECT * FROM "schema_version"
 ```
 
 in the h2 web console and look at the resulting table.
+
+####Example 4
+Simple example with a subversion migration.

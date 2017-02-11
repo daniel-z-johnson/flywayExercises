@@ -1,0 +1,1 @@
+ALTER TABLE roles ADD COLUMN (alt_name VARCHAR(255)) AFTER name;
