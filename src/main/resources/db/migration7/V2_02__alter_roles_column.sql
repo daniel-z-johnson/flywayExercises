@@ -1,0 +1,1 @@
+ALTER TABLE roles ALTER COLUMN alt_name RENAME TO alt_name_2;

@@ -35,3 +35,7 @@ For fun tried to do a version with letters, did not expect it to work and it did
 ```
 Caused by: org.flywaydb.core.api.FlywayException: Invalid version containing non-numeric characters. Only 0..9 and . are allowed. Invalid version: a
 ```
+
+####Example 7
+Expected no exceptions got no exceptions, have versions 2.00 to 2.10
+
