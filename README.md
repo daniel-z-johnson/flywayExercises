@@ -41,3 +41,10 @@ Expected no exceptions got no exceptions, have versions 2.00 to 2.10
 
 ####Example 8
 Expected an exception, thought Flyway would confuse V2_1_alter_roles_column.sql to be confused with V2_10_alter_roles_column.sql but it seems Flyway with smarter then that
+
+####Example 9
+Intentionally had some SQL that cause an exception when executed. As expected Flyway gives a decent error message
+```
+Caused by: org.h2.jdbc.JdbcSQLException: Table "ROLES" not found; SQL statement:
+ALTER TABLE roles ADD COLUMN (alt_name VARCHAR(255)) AFTER name [42102-193]
+```
