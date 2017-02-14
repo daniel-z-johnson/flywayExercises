@@ -24,8 +24,14 @@ Simple example with a subversion migration.
 ####Example 5
 Two migrations evaluate to version 2. An error occurred as should be expected. Fairly good error message also
 ```
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 2
+Caused by: org.flywaydb.core.api.FlywayException: Found more than one migration with version 2
 Offenders:
 -> {locationOfProject}/flyway/target/classes/db/migration5/V2__roles.sql (SQL)
 -> {locationOfProject}/flyway/target/classes/db/migration5/V2_0__alter_roles.sql (SQL)
+```
+
+####Example 6
+For fun tried to do a version with letters, did not expect it to work and it did not, still a good error message was produced
+```
+Caused by: org.flywaydb.core.api.FlywayException: Invalid version containing non-numeric characters. Only 0..9 and . are allowed. Invalid version: a
 ```
