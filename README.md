@@ -4,6 +4,8 @@ The point of this project is to try out [Flyway](https://flywaydb.org/) database
 
 To change which set of migrations run go into application.properties and change the flyway.locations to db/migration{d} where d is the migration number or left off completely for the very basic migration example
 
+H2 console is enabled to use goto [http://localhost:8080/h2-console] and use the db url _jdbc:h2:mem:flywaytest_
+
 ####Example 1
 db/migration - most basic example, only migration is run
 
@@ -11,7 +13,7 @@ db/migration - most basic example, only migration is run
 db/migration2 - a very basic example with two migrations
 
 ####Example 3
-db/migration3 - slightly malformed example migration skips V2__{descriptions}.sql, still works. It worth running
+db/migration3 - slightly malformed example migration skips V2__{descriptions}.sql, still works. It is worth running
 ```SQL
 SELECT * FROM "schema_version"
 ```
