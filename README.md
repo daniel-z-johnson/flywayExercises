@@ -39,3 +39,5 @@ Caused by: org.flywaydb.core.api.FlywayException: Invalid version containing non
 ####Example 7
 Expected no exceptions got no exceptions, have versions 2.00 to 2.10
 
+####Example 8
+Expected an exception, thought Flyway would confuse V2_1_alter_roles_column.sql to be confused with V2_10_alter_roles_column.sql but it seems Flyway with smarter then that
